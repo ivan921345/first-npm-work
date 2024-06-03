@@ -5,14 +5,20 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Document</title>
 	<link rel="stylesheet" href="css/styles.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link rel="stylesheet" href="../node_modules/swiper/swiper.min.css">
+	<link rel="stylesheet" href="../node_modules/basiclightbox/dist/basicLightbox.min.css">
+	<link href="https://fonts.googleapis.com/css2?family=Anta&family=Jacquard+24&family=Jersey+20&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
 </head>
 <body>
 	
-	<header>
+	<header id="header">
 		<div class="header__logo--container">
 			<div class="header__logo">
-				<img src="#" alt="header logo, a square filled with black">
-				<p></p>
+				<a href="index.html">
+					<img src="images/logo.png" alt="header logo, a square filled with black">
+				</a>
 			</div>
 			<div class="header__emailText">
 				<p>mail@blanko.com</p>
@@ -20,14 +26,155 @@
 		</div>
 		
 		<div class="header__nav">
-			<a href="#"></a>
-			<a href="#"></a>
-			<a href="#"></a>
-			<button></button>
+			<a href="#">Landing</a>
+			<a href="#">All pages</a>
+			<a href="#">Template</a>
+			<button>Purchase template</button>
 		</div>
 	</header>
 
+	<main>
+		
+		<section class="blankoTemplate--container">
+			<div class="blankoTemplate__text--container">
+				<p class="blankoTemplate__headerText">Blanko template</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Odio mauris <samp>porttitor amet volutpat.</samp> </p>
+				<div class="blankoTemplate__button--container">
+					<button>Purchase template</button>
+					<button class="otherTemplatesButton">Other templates</button>
+				</div>
+			</div>
+			<div class="blankoTemplate__image--container">
+				<img src="images/phoneDemonstartionImage.png" alt="">
+			</div>
+		</section>
 
-	<script src="js/index.js"></script>
+		<section class="advantages--container">
+			<div class="adavntagesCard">
+				<div class="adavntagesCard__image--container">
+					<img src="images/advantagesSpeed.png" alt="">
+
+				</div>
+				
+				<div class="adavntagesCard__text--container">
+					<p class="adavntagesCard__headerText">Speed</p>
+					<p>Open a commercial-grade current account from anywhere</p>
+				</div>
+
+			</div>
+
+			<div class="adavntagesCard">
+				<div class="adavntagesCard__image--container">
+					<img src="images/advantagesDesign.png" alt="">
+
+				</div>
+				
+				<div class="adavntagesCard__text--container">
+					<p class="adavntagesCard__headerText">Design</p>
+					<p>Open a commercial-grade current account from anywhere</p>
+				</div>
+
+			</div>
+
+			<div class="adavntagesCard">
+				<div class="adavntagesCard__image--container">
+					<img src="images/advantagesModularity.png" alt="">
+
+				</div>
+				
+				<div class="adavntagesCard__text--container">
+					<p class="adavntagesCard__headerText">Modularity</p>
+					<p>Open a commercial-grade current account from anywhere</p>
+				</div>
+
+			</div>
+		</section>
+
+		<section class="swiper joinCommunity--cointainer">
+			<div class="joinCommunity__image--container">
+				<img src="images/drukl.png" alt="">
+			</div>
+			
+			<div class="swiper-wrapper joinCommunity__text--container">
+
+				<div class="swiper-slide">
+					<p class="joinCommunity__text">“Joi a community of industry leading professionals. Join a community of industry leading professionals.“</p>
+					<p class="joinCommunity__author">Laura Paula</p>
+					<p class="joinCommunity__copyright">Director @Company</p>
+				</div>
+
+				<div class="swiper-slide">
+					<p class="joinCommunity__text">“Joi a community of industry leading professionals. Join a community of industry leading professionals.“</p>
+					<p class="joinCommunity__author">Laura Paula</p>
+					<p class="joinCommunity__copyright">Director @Company</p>
+				</div>
+
+			</div>
+
+				<div class="joinCommunity__switcher">
+					<button class="js-prevEl js-joinCommunity--activeBtn"></button>
+					<button class="js-nextEl"></button>
+				</div>
+
+		</section>
+
+		<section class="landingPages--container">
+			<div class="landingPagesImages ">
+				<p>Landing pages</p>
+				<div class="landingPagesImages--container">
+
+				</div>
+			</div>
+		</section>
+
+	</main>
+
+
+	<footer>
+		<div class="footer--wrapper">
+
+			<div class="footer__logo">
+				<a href="#header"><img src="images/logo.png" alt=""></a>
+				<button class="footer__logo--button">Get on Webflow</button>
+			</div>
+	
+			<div class="footer__nav">
+				<div class="footer__nav--links">
+					<a href="#">Showcase</a>
+					<a href="#">Landing one</a>
+					<a href="#">Sign up</a>
+					<a href="#">Other templates</a>
+				</div>
+				
+				<div class="footer__nav--socialMedia">
+					<button><img src="images/instpng.png" alt=""></button>
+					<button><img src="images/tweet.png" alt=""></button>
+					<button><img src="images/face.png" alt=""></button>
+				</div>
+			</div>
+			<div class="footer__sponsors">
+	
+				<div class="footer__sponsors--logos">
+					<p>Powered by</p>
+					<img src="images/webflow.png" alt="">
+					<p>Designed by</p>
+					<p class="designerName">Veljko</p>
+				</div>
+	
+				<div class="footer__sponsors--contact">
+					<a href="">Contact<a>
+				</div>
+	
+			</div>
+
+		</div>
+
+	</footer>
+
+
+	<script src="../node_modules/lazysizes/lazysizes.min.js"></script>
+	<script src="../node_modules/swiper/swiper.min.js"></script>
+	<script src="../node_modules/basiclightbox/dist/basicLightbox.min.js"></script>
+	<script src="js/index.js" type="module"></script>
 </body>
 </html>

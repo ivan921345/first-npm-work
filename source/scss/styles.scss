@@ -2,13 +2,332 @@
 	padding: 0;
 	margin: 0;
 	box-sizing: border-box;
+	scroll-behavior: smooth
 }
+@import '_mixins';
+
+$font-family: "Roboto", sans-serif;
+$main-orange-color: #FF7143;
+$main-black-color: #000000;
+
+// @include font($main-black-color,700,4.5rem,$font-family);
 
 
 header{
+	height: 8dvh;
 	display: flex;
-	 justify-content: space-around;
+	justify-content: space-around;
+	align-items: center;
+	background-color: #000;
 	.header__logo--container{
+		display: flex;
+		@include font(#fff,400,1rem,$font-family);
+		.header__logo{
+			margin-right: 3rem;
+		}
+		.header__emailText{
+			p{
+				padding: 10px 10px;
+			}
+			background-color: #1f1f1f;
+			display: flex;
+			align-items: center;
+			border-radius: 5px;
+		}
+	}
+	.header__nav{
+		a{
+			text-decoration: none;
+			margin-right: 10px;
+			@include font(#fff,400,1rem,$font-family);
+			&:hover{
+				opacity: 0.8;
+			}
+		}
+		button{
+			margin-left: 2rem;
+			@include font(#000000,700,1rem,$font-family);
+			background-color: $main-orange-color;
+			padding: 12px 32px;
+			border-radius: 8px;
+			border: none;
+			transition: 0.5s;
+			transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
+			&:hover{
+				opacity: 0.7;
+				cursor: pointer;
+			}
+
+		}
+	}
+}
+
+main{
+	overflow: hidden;
+	.blankoTemplate--container{
+		width: 100%;
+		display: flex;
+		justify-content: space-around;
+		background-color: $main-orange-color;
+		display: flex;
+		.blankoTemplate__text--container{
+			text-align: center;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			p{
+				@include font($main-black-color,400,1.125rem,$font-family);
+				display: flex;
+				flex-direction: column;
+				margin-bottom: 6%;
+				samp{
+					@include font($main-black-color,400,1.125rem,$font-family);
+				}
+			}
+			.blankoTemplate__headerText{
+				@include font($main-black-color,700,4.5rem,$font-family);
+			}
+			.blankoTemplate__button--container{
+				button{
+					background-color: $main-black-color;
+					padding: 20px 32px;
+					margin-right: 6px;
+					@include font(#fff,700,1.125rem,$font-family);
+					border: none;
+					border-radius: 8px;
+					transition: 0.2s;
+					&:hover{
+						opacity: 0.8;
+						cursor: pointer;
+					}
+				}
+				.otherTemplatesButton{
+					background-color: #fff;
+					color: #000;
+				}
+
+			}
+		}
+
+	}
+	.advantages--container{
+		height: 20dvh;
+		width: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: space-evenly;
+		.adavntagesCard{
+			width: 20%;
+			display: flex;
+			.adavntagesCard__image--container{
+				background-color:#FDE7DA;
+				margin-right: 10%;
+				img{
+					padding: 15px;
+				}
+			}
+			.adavntagesCard__text--container{
+				p{
+					@include font($main-black-color,400,1rem,$font-family);
+				}
+				.adavntagesCard__headerText{
+					@include font($main-black-color,700,1.5rem,$font-family);
+				}
+			}
+		}
+	}
+
+	.joinCommunity--cointainer{
+		background-color: $main-black-color;
 		
+		.joinCommunity__image--container{
+			width: 100%;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			padding-top: 5%;
+			padding-bottom: 5%;
+		}
+
+		.joinCommunity__text--container{
+			div{
+				display: flex;
+				align-items: center;
+				flex-direction: column;
+				justify-content: center;
+				p{
+					text-align: center;
+					width: 40%;
+					@include font(#fff,400,2.5rem,$font-family);
+					margin-bottom: 3%;
+				}
+				.joinCommunity__author{
+					@include font(#fff,700,1.125rem,$font-family);
+					margin-bottom: 0.8%;
+				}
+				.joinCommunity__copyright{
+					@include font(#fff,700,1.125rem,$font-family);
+					opacity: 0.7;
+					margin-bottom: 2%;
+				}
+			}
+		}
+	}
+
+	.joinCommunity__switcher{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin-bottom: 3%;
+		button{
+			width: 17px;
+			height: 17px;
+			border: none;
+			margin-right: 2px;
+			opacity: 0.4;
+			transition: 0.3s;
+			&:hover{
+				cursor: pointer;
+			}
+		}
+		.js-joinCommunity--activeBtn{
+			opacity: 1;
+		}
+	}
+
+
+	.landingPages--container{
+		width: 100%;
+		display: flex;
+		justify-content: center;
+		.landingPagesImages{
+			width: 70%;
+			p{
+				@include font($main-black-color,700,2.5rem,$font-family);
+			}
+
+			.landingPagesImages--container{
+				display: flex;
+				flex-wrap: wrap;
+				.landingPages__imageCard{
+					img{
+						margin-bottom: 10px;
+						&:hover{
+							cursor: pointer;
+						}
+					}
+					.landingImage--text{
+						display: flex;
+						flex-direction: column;
+						@include font($main-black-color,700,1.25rem,$font-family);
+					}
+				}
+			}
+		}
+	}
+}
+
+
+footer{
+	height: 30dvh;
+	background-color: $main-black-color;
+	display: flex;
+	justify-content: center;
+	.footer--wrapper{
+		align-self: center;
+		width: 80%;
+
+		.footer__logo{
+			margin-bottom: 3%;
+			display: flex;
+			justify-content: space-between;
+			button{
+				@include font($main-black-color,700,1rem,$font-family);
+				background-color: #fff;
+				border-radius: 5px;
+				border: 0;
+				padding: 12px 32px;
+				&:hover{
+					opacity: 0.8;
+					cursor: pointer;
+				}
+			}
+		}
+
+		.footer__nav{
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			.footer__nav--links{
+				a{
+					overflow: hidden;
+					text-decoration: none;
+					@include font(#fff,400,1rem,$font-family);
+					margin-right: 10px;
+					padding-bottom: 2px;
+					&:hover{
+						opacity: 0.8;
+					}
+				}
+			}
+			.footer__nav--socialMedia{
+				button{
+					background-color: #191919;
+					padding: 17px;
+					margin-right: 10px;
+					border: 0;
+					img{
+						width: 90%;
+					}
+				}
+			}
+		}
+		.footer__sponsors{
+			margin-top: 2%;
+			padding-top: 1%;
+			border-top: solid 2px #292929;
+			display: flex;
+			justify-content: space-between;
+			.footer__sponsors--logos{
+				display: flex;
+				align-items: center;
+				img{
+					margin-right: 10px;
+				}
+				p{
+					@include font(#fff,400,1rem,$font-family);
+					margin-right: 10px;
+				}
+				.designerName{
+					@include font($main-orange-color,400,1rem,$font-family);
+				}
+			}
+			.footer__sponsors--contact{
+				display: flex;
+				align-items: center;
+				a{
+					position: relative;
+					text-decoration: none;
+					@include font(#fff,400,1rem,$font-family);
+					overflow: hidden;
+					&::before{
+						transition: 0.2s;
+						content: '';
+						left: 0;
+						bottom: 0;
+						width: 100%;
+						height: 2px;
+						position: absolute;
+						background-color: #fff;
+						transform: translateX(-100%);
+					}
+
+					&:hover::before{
+						transform: translateX(0%);
+					}
+				}
+			}
+		}
 	}
 }
